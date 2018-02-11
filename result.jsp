@@ -22,6 +22,7 @@ mA = "MorseAudios/" + mA;
     <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
     <title>Your Morse Code Visualization</title>
     <link type="text/css" rel="stylesheet" href="css.css" />
+    <link href='http://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
     
     <!-- Javascript: play the audio -->
     <script>
@@ -32,24 +33,32 @@ mA = "MorseAudios/" + mA;
         }
     </script>
     
-    
 </head>
+
 <body>
-    <h1> Check your Morse Code Visualization here! </h1>
+  <div class="head">
+    <img src="CSS files/background.jpg" style="width:100%; height:400px" />
+    <div class="centered"> <h1> Check your Morse Code Visualization here! </h1> </div>
+  </div>
+  
+  <div class="body">
+    <div class="instruction">
+    <img src="CSS files/bag.png" style="width:100px; height:100px" />
     <p> Click "previous" or "next" to look at the visualization for each letter of your word! </p>
     <p> Click "Try again" to start a new visualization! </p>
+    </div>
     
     <!-- Get the picture for the morse code -->
-    <img src='MorsePics/<%=mP %>' />
-    
-    
+    </br>
+    <div class="morsePics"> <img src='MorsePics/<%=mP %>' /> </div>
+   
     <!-- previous button -->
     <form name=changePic action=verify method=post>
         <% if(counter==0) { %>
-        	<input type="submit" name="previous" value="previous" disabled/>
+        	<div class="previous"> <input type="submit" name="previous" value="previous" disabled/> </div>
         <% }
         else { %>
-        <input type="submit" name="previous" value="previous"/>
+        <div class="previous"> <input type="submit" name="previous" value="previous"/> </div>
         <input type="hidden" name="counter" value="<%=counter-1 %>" />
         <input type="hidden" name="word" value="<%=word %>" />
         <% } %>
@@ -58,10 +67,10 @@ mA = "MorseAudios/" + mA;
     <!-- next button -->
     <form name=changePic action=verify method=post>
         <% if(counter==total) { %>
-        	<input type="submit" name="next" value="next" disabled/>
+        	<div class="next"> <input type="submit" name="next" value="next" disabled/> </div>
         <% }
         else { %>
-        <input type="submit" name="next" value="next"/>
+        <div class="next"> <input type="submit" name="next" value="next"/> </div>
         <input type="hidden" name="counter" value="<%=counter+1 %>" />
         <input type="hidden" name="word" value="<%=word %>" />
         <% } %>
@@ -69,7 +78,9 @@ mA = "MorseAudios/" + mA;
     
     
     </br>
+    </br>
     <!-- Get the audio for the morse code -->
+    <div class="again">
     <form>   
         <input type="button" value="Play Audio" onclick="playAudio()" />
         <audio id="morseAudio" src='<%=mA %>'></audio>
@@ -77,6 +88,8 @@ mA = "MorseAudios/" + mA;
     
     </br>
     <a href="index.jsp"> Play again </a>
+    </div>
     
+  </div>
 </body>
 </html>
