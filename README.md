@@ -5,8 +5,8 @@ Setting up to run this program, you'll need:
     
 To get the proper files either:
 
-    Create a dynamic web project and add the java classes, servlets and jsps to the proper packages/location mentioned in the ReadMe of     the branches 
-    
+    Create a dynamic web project and add the java classes, servlets and jsps to the proper packages/location mentioned in the ReadMe of the branches 
+   
     OR 
     
     Download the zip file of the project here in the master and import it
