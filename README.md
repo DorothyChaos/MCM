@@ -1,7 +1,8 @@
 # MCM
 Setting up to run this program, you'll need:
-    1.  Eclipse Java EE Developer version for web developers
-    2.  TomCat Server 7 or 8
+
+    1.      Eclipse Java EE Developer version for web developers
+    2.      TomCat Server 7 or 8
     
 To get the proper files either:
 
