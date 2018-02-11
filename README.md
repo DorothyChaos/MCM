@@ -13,19 +13,19 @@ To get the proper files either:
     
 To run:
 
-  Delete Server in the console if used before to avoid errors
-  Right click the dynamic web project
-  Click Run on Server
-  Choose the appropriate TomCat Server
+  1.    Delete Server in the console if used before to avoid errors
+  2.    Right click the dynamic web project
+  3.    Click Run on Server
+  4.    Choose the appropriate TomCat Server
   
 Purpose of Program:
 
   To simply translate short words and phrases to Morse Code, providing audio and images of each character to teach users how to recognize Morse code patterns
   
 Functionalities:
-  1. Recognizes alphabet, number 0-9 and a wide variety of punctuation
-  2. Button for audio allows user to playback the morse code as many times as they wish
-  3. Ability to move forwards and backwards through the letters of the inputted string
+  1.    Recognizes alphabet, number 0-9 and a wide variety of punctuation
+  2.    Button for audio allows user to playback the morse code as many times as they wish
+  3.    Ability to move forwards and backwards through the letters of the inputted string
   
 Commentary: 
 
