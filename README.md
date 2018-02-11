@@ -16,6 +16,7 @@ To run:
   Choose the appropriate TomCat Server
   
 Purpose of Program:
+
   To simply translate short words and phrases to Morse Code, providing audio and images of each character to teach users how to recognize Morse code patterns
   
 Functionalities:
@@ -24,7 +25,8 @@ Functionalities:
   3. Ability to move forwards and backwards through the letters of the inputted string
   
 Commentary: 
-  While it's a relatively simple program we had fun creating it, particularly learning how to implement audio within JavaScript. We hope     you like our take on Vision, simeltaneously bringing old technology together with new technology and easy-to-follow visuals for a language that is typically only audible. Thank you for checking out our project!
+
+   While it's a relatively simple program we had fun creating it, particularly learning how to implement audio within JavaScript. We hope    you like our take on Vision, simeltaneously bringing old technology together with new technology and easy-to-follow visuals for a          language that is typically only audible. Thank you for checking out our project!
   
   Best, 
   
