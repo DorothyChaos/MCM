@@ -33,6 +33,6 @@ Commentary:
   
   Best, 
   
-       Dorothy, Vanilla, Dee-Dee
+       Dorothy, Vanilla, & Dee-Dee
   
   
