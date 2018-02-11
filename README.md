@@ -2,14 +2,17 @@
 Setting up to run this program, you'll need:
     1.  Eclipse Java EE Developer version for web developers
     2.  TomCat Server 7 or 8
+    
 To get the proper files either:
+
     Create a dynamic web project and add the java classes, servlets and jsps to the proper packages/location mentioned in the ReadMe of       the branches 
     
-    OR
+    OR 
     
     Download the zip file of the project here in the master and import it
     
 To run:
+
   Delete Server in the console if used before to avoid errors
   Right click the dynamic web project
   Click Run on Server
