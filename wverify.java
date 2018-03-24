@@ -81,10 +81,10 @@ public class wverify extends HttpServlet {
 		session.setAttribute("word", word);
 		session.setAttribute("mP", wholePic);
 		session.setAttribute("mA", wholeAudio);
-		session.setAttribute("counter", counter);
+		//session.setAttribute("counter", counter);
 		session.setAttribute("total", total);
 		
-		String url = "/result.jsp";
+		String url = "/wresult.jsp";
 		
 		RequestDispatcher dispatcher = request.getRequestDispatcher(url);
 		dispatcher.forward(request, response);
