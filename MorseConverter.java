@@ -6,8 +6,7 @@ public class MorseConverter
 	private String wordID;
 	private String origWord;
   
-  /** A constructer for the MorseConverter class
-      @param word Represents the word to be converted to 0s & 1s*/
+  /** A constructer for the MorseConverter class */
 	MorseConverter()
 	{
 		origWord = generateWord();
@@ -15,7 +14,8 @@ public class MorseConverter
 		wordID = convertWord(ml.getEnumString());
 	}
 	
-	/** */
+	/** A method that returns the origWord instanfce variable
+	*/
 	public String getOrigWord()
 	{
 		return origWord;
