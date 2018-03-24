@@ -17,20 +17,22 @@
   
   <div class="body">
     <div class="instruction">
-    <img src="CSS files/bag.png" style="width:100px; height:100px" />
-    <p> Please type any word, phrase or sentence you like! </p>
-    <p> Click "submit" to get your word in a beautiful visualized Morse Code format. Turn on your sound! </p>
+        <img src="CSS files/bag.png" style="width:100px; height:100px" />
+        <p> Choose the mode you would like to start with:  </p>
     </div>
     
-    <div id="form">
-    <form name="MCM" action="verify" method="post">
-        <input type="text" name="word" value="put your word or phrase here" />
-        </br>
-        </br>
-        <input type="submit" name="submit" value="Get your visualized morse code!" />
-        
-        <input type="hidden" name="counter" value="0" />
-    </form>
+    <div class="dropdown">
+        <a href="translate.jsp"><button class="button"> Translate </button></a>
+        <div class="dropdown-content">
+            <p> Type in any words, phrases or sentences to be translated to Morse Code! </p>
+        </div>
+    </div>
+    
+    <div class="dropdown">
+        <a href="practice.jsp"><button class="button"> Practice </button></a>
+        <div class="dropdown-content">
+            <p> Practice your Morse Code knowledge with our word bank! </p>
+        </div>
     </div>
   </div>
   
