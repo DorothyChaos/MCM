@@ -4,12 +4,21 @@ import java.util.*;
 public class MorseConverter 
 {
 	private String wordID;
+	private String origWord;
   
   /** A constructer for the MorseConverter class
       @param word Represents the word to be converted to 0s & 1s*/
-	MorseConverter(Letter [] word)
+	MorseConverter()
 	{
-		wordID = convertWord(word);
+		origWord = generateWord();
+		MorseLetters ml = new MorseLetters(origWord);		
+		wordID = convertWord(ml.getEnumString());
+	}
+	
+	/** */
+	public String getOrigWord()
+	{
+		return origWord;
 	}
 	
   /** A method that returns the 0 & 1 representation of a letter
@@ -155,7 +164,7 @@ public class MorseConverter
 	
   /** A method that randomly generates a word
        @return Returns an array of the equivalant enumaerated values of the word*/
-	static public Letter[] generateWord()
+	static public String generateWord()
 	{
 		//Code from: https://gamedev.stackexchange.com/questions/144834/how-can-i-generate-random-meaningful-words-in-a-typing-game
 		
@@ -187,9 +196,7 @@ public class MorseConverter
 		
 		String randWord = (words.get(r.nextInt(wordsSize)));	
 	
-		MorseLetters word = new MorseLetters(randWord); 
-		
-		return word.getEnumString();
+		return randWord;
 	} // generateWord
 	
 }
