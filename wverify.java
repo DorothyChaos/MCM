@@ -46,7 +46,6 @@ public class wverify extends HttpServlet {
 		
 		//getting session attributes from buttonID servlet
 		String word = (String) session.getAttribute("word");
-		int counter = Integer.parseInt((String) session.getAttribute("counter"));
 		
 		//creating string array for whole word - audio and pictures
 		String [] wholeAudio = new String[word.length()];
@@ -58,30 +57,27 @@ public class wverify extends HttpServlet {
 		String [] submiss = mL.getSubmiss();
 		
 		//creating loop to get wholeAudio and wholePic
-		for(int i = 0; i <= counter; i++) {
+		for(int i = 0; i < word.length(); i++) {
 			//based on the counter we match the letter
-			Letter let = mL.matchLetter(submiss[counter]);
+			Letter let = mL.matchLetter(submiss[i]);
 			//create instance of MorseAudio class
 			MorseAudios mA = new MorseAudios(let);
 			//call on method to get the audio file name
 			String audioFile = mA.matchAudio();
 			//storing audio string into array
-			wholeAudio[counter] = audioFile;
+			wholeAudio[i] = audioFile;
 			//create instance of MorsePics class
 			MorsePics mP = new MorsePics(let);
 			//call on method to get pic file name
 			String picFile = mP.matchPic();
 			//storing pic into wholePic
-			wholePic[counter] = picFile;
-			counter++;
+			wholePic[i] = picFile;
 		}//for
 		//create the total counts of letters in submiss
 		int total = submiss.length - 1;
 		
-		session.setAttribute("word", word);
 		session.setAttribute("mP", wholePic);
 		session.setAttribute("mA", wholeAudio);
-		//session.setAttribute("counter", counter);
 		session.setAttribute("total", total);
 		
 		String url = "/wresult.jsp";
