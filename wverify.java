@@ -42,19 +42,21 @@ public class wverify extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		String word = request.getParameter("word");
-		int counter = Integer.parseInt(request.getParameter("counter"));
-		
 		HttpSession session = request.getSession();
+		
+		//getting session attributes from buttonID servlet
+		String word = (String) session.getAttribute("word");
+		int counter = Integer.parseInt((String) session.getAttribute("counter"));
+		
+		//creating string array for whole word - audio and pictures
+		String [] wholeAudio = new String[word.length()];
+		String [] wholePic = new String [word.length()];
 		
 		//creates instance  of MorseLetters, which puts the word in the array
 		MorseLetters mL = new MorseLetters(word);
 		//here we retrieve the array with our word
 		String [] submiss = mL.getSubmiss();
-		//creating string array for whole - audio
-		String [] wholeAudio = new String[word.length()];
-		//creating string array for whole - pictures
-		String [] wholePic = new String [word.length()];
+		
 		//creating loop to get wholeAudio and wholePic
 		for(int i = 0; i <= counter; i++) {
 			//based on the counter we match the letter
