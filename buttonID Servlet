@@ -42,10 +42,9 @@ public class buttonID extends HttpServlet {
 		
 		String action = request.getParameter("action");
 		String word = request.getParameter("word");
-		int counter = Integer.parseInt(request.getParameter("counter"));
+
 		
 		session.setAttribute("word", word);
-		session.setAttribute("counter", counter);
 	
 		String url = "";
 		if("action".equalsIgnoreCase("Letter-By-Letter")) {
