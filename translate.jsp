@@ -22,17 +22,19 @@
         <p>Turn on your sound to hear the magic!</p>
      </div>
 
+	
    <div id="form">
-    <form name="MCM" action="verify" method="post">
-        <input type="text" name="word" value="" />
+    <form name="MCM" action="buttonID" method="post">
+         <input type="text" name="word" value="" /> 
         </br>
         </br>
-        <input type="submit" name="submit" value="Get your morse code!" />
+        <input type="submit" name="action" value "Letter-By-Letter" />
+        <input type="submit" name="action" value "Whole" />
         
-        <input type="hidden" name="counter" value="0" />
+        <input type="hidden" name="counter" value="0" />      
     </form>
     </div>
-
+    
   </div>    
     
   <div class="bottom"> <p> Copyright @ DVD-MCM </p> </div>
