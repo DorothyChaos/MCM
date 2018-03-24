@@ -1,6 +1,7 @@
 public class MorseLetters 
 {
 	private String [] submiss;
+	private Letter [] enumString;
 
 	/** A constructor
 	    @param word Represents the word/phrase to be translated into Morse Code**/
@@ -12,8 +13,10 @@ public class MorseLetters
 		
 		for(int i = 0; i < word.length(); i++)
 		{
-				submiss[i] = Character.toString(word.charAt(i));	
+			submiss[i] = Character.toString(word.charAt(i));	
 		}
+		
+		setEnumString(submiss);
 	}
 	
 	/** A getter method for the submiss variable
@@ -21,12 +24,14 @@ public class MorseLetters
 	public String [] getSubmiss() 
 	{
 		return submiss;
-	}
+	} //getter
 
+	/** A setter method for the submiiss variable 
+	     @param submiss **/
 	public void setSubmiss(String [] submiss) 
 	{
 		this.submiss = submiss;
-	}  
+	} // setter  
 	
 	/** A method that matches the letter to its enumeration 
 	    @param let Represents the letter to be matched
@@ -265,6 +270,23 @@ public class MorseLetters
 		}
 		
 		return null;
-	}
+	} //matching
 	
+	/** A method that converts a string to it's Letter enum equivalent*/
+	void setEnumString(String [] sub)
+	{
+		enumString = new Letter[sub.length];	
+		
+		for(int i = 0; i < sub.length; i++)
+		{
+			enumString[i] = matchLetter(sub[i]);
+		}
+	} // set EnumString
+	
+	/** A method that retrieves the enumString variable
+	    @return enumString*/
+	public Letter [] getEnumString()
+	{
+		return enumString;
+	} //get EnumString	
 }
