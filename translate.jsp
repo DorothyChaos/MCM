@@ -30,7 +30,7 @@
         </br>
         <input type="submit" name="action" value="Letter-By-Letter" />
         <input type="submit" name="action" value="Whole" />
-            
+        
     </form>
     </div>
     
