@@ -7,7 +7,7 @@ public class MorseConverter
 	private String origWord;
   
   /** A constructer for the MorseConverter class */
-	MorseConverter()
+	public MorseConverter()
 	{
 		origWord = generateWord();
 		MorseLetters ml = new MorseLetters(origWord);		
