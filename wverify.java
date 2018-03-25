@@ -75,7 +75,7 @@ public class wverify extends HttpServlet {
 		}//for
 		
 		//create the total counts of letters in submiss
-		int total = submiss.length - 1;
+		int total = submiss.length;
 		
 		session.setAttribute("mP", wholePic);
 		session.setAttribute("mA", wholeAudio);
