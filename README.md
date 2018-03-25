@@ -29,7 +29,7 @@ Functionalities:
   2.    Button for audio allows user to playback the morse code as many times as they wish
   3.    Ability to move forwards and backwards through the letters of the inputted string
   4.    Translates and displays the morse code translation for an entire word
-  5.    Practice functionality allows you to practice listening to & typing the morse cde for a randomly picked word
+  5.    Practice functionality allows you to practice listening to & typing the morse code for a randomly generated word
   
   
 Commentary: 
