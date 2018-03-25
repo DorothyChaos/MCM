@@ -46,8 +46,14 @@ public class verify extends HttpServlet {
 		
 		//getting session attributes from buttonID servlet
 		String word = (String) session.getAttribute("word");
-		int counter = Integer.parseInt((String) session.getAttribute("counter"));
+		int counter = 0; 
+		
+		try{
+			counter = Integer.parseInt(request.getParameter("counter"));
 			
+		} catch(Exception e) {
+		}
+		
 		
 		//creates instance  of MorseLetters, which puts the word in the array
 		MorseLetters mL = new MorseLetters(word);
