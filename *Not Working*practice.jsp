@@ -42,7 +42,7 @@ String wordID = obj.getWordID();
      
     <div id="form">
     <form name="practice" action="compare" method="post">
-        <input type="text" id="input2" value="Your Morse Code" />
+        <input type="text" id="input2" name="morseCode" value="Your Morse Code" />
         </br>
         </br>
         <input type="button" id="tryit" value="try it" onclick="calculation();" />
