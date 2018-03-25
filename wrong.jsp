@@ -23,6 +23,11 @@ int counter = (Integer) session.getAttribute("counter");
     <title>Your Practice Result</title>
     <link type="text/css" rel="stylesheet" href="css.css" />
     <link href='http://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
+    
+    <!-- For the collapsable "show me the correct answer" button -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
   <div class="head">
@@ -35,16 +40,24 @@ int counter = (Integer) session.getAttribute("counter");
     <p>Sorry! You didn't type the Morse Code correctly for this word <%=word %>. Please try again!</p>
     </div>
     
-    <button class="button"> Show me the correct answer </button>
+    <button class="button" class="btn btn-info" data-toggle="collapse" data-target="#demo"> Show me the correct answer </button>
+    <div id="demo" class="collapse">
+        <p>The correct Morse Code input should be: </p>
+        <p><%=wordID %></p>
+    </div>
+    </br>
     
+    </br>
     <form action="tryAgain.jsp" name="tryAgain" method="get">
         <button class="button"> Try Again </button>
         <input type="hidden" name="word" value=<%=word %> />
         <input type="hidden" name="wordID" value=<%=wordID %> />
         <input type="hidden" name="counter" value=<%=counter %> />
     </form>
+    </br>
       
     <a href="practice.jsp"><button class="button"> Practice a New Word </button></a>
+    </br>
   </div>
 
   <div class="bottom"> <p> Copyright @ DVD-MCM </p> </div>
