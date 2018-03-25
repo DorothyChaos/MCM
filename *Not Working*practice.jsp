@@ -41,11 +41,11 @@ String wordID = obj.getWordID();
      </div>
      
     <div id="form">
-    <form name="practice" action="compare" method="post"">
-        <input type="text" name="morseCode" value="Your Morse Code" />
+    <form name="practice" action="compare" method="post">
+        <input type="text" id="input2" value="Your Morse Code" />
         </br>
         </br>
-        <input type="button" value="Try it" onclick="tryit();" />
+        <input type="button" id="tryit" value="try it" onclick="calculation();" />
         <input type="submit" name="submit" value="submit" />
         
         <input type="hidden" name="counter" value="0" />
@@ -54,26 +54,40 @@ String wordID = obj.getWordID();
     </form>
     </div>
     
-<!--     Javascript related to "try it" button
+    <!-- Javascript related to "try it" button -->
     <script>
-          function tryit() {
-        	var input = document.getElementByName("morseCode").value; 
-            for (i=0; i<input.length; i++){
-        		if(input.contains("0")){
-        			var audio = new Audio("0_number_morse_code.ogg.mp3");
-        			audio.play();
+    function calculation() {
+    	var input2 = document.getElementById("input2").value; 
+    	var files = [ ];
+    
+            for (i=0; i<input2.length; i++){
+            	console.log(input2.length);
+        		if(input2[i]==0){
+        			files.push("MorseAudios/Morse Code Alphabet A Alpha.mp3");
+    
+        			
         		}
         		
-        		if(input.contains("1")){
-        			var audio = new Audio("1_number_morse_code.ogg.mp3");
-        			audio.play();
+        		if(input2[i]==1){	
+        			files.push("MorseAudios/Morse Code Alphabet T Tango.mp3"); 
         		}
-        	} 
-        	
-        	console.log(input);
-        	
+
+        	}  
+         
+        console.log(files);
+        var i = -1;
+        playSnd();
+            
         }
-    </script> -->
+    
+    function playSnd()
+    {
+    	i++;
+    	if(i == files.length) return;
+    	files[i].addEventListener('ended', playSnd);
+    	files[i].play();
+    }
+    </script>
      
   </div>
   
